@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hello World · My Fortress</title>
+    <title>Number of Generators of a Matrix Ring as an Algebra · My Fortress</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -243,7 +243,7 @@
                 <a href="/">My Fortress</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Hello World</a>
+                <a href="#" class="post-name">Number of Generators of a Matrix Ring as an Algebra</a>
             </div>
     </div>
     
@@ -273,7 +273,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hello World
+            Number of Generators of a Matrix Ring as an Algebra
             <!-- 404 -->
             
         </h1>
@@ -290,14 +290,20 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="algebra, matrix ring, algebra over a ring, generator, quaternion, noncommutative algebra">algebra, matrix ring, algebra over a ring, generator, quaternion, noncommutative algebra</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">73</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">1.7k</span>Reading time: <span class="post-count reading-time">10 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/01/28</span>
+                    <span class="post-intro-time">2019/02/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -421,24 +427,100 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <hr>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title=" Introduction "></a><center> Introduction </center></h1><p>noncommutative algebra에서, ring 혹은 algebra의 예시로 흔히 <a href="https://en.wikipedia.org/wiki/Matrix_ring" target="_blank" rel="noopener">matrix ring</a>을 들곤 하는데, 왜냐하면 noncommutative operation 중 가장 유명한 것이 함수의 합성이고, 함수가 linear하다는 조건이 ring의 분배법칙과 algebra의 상수곱에 관한 조건과 정확히 일치하기 때문이에요. (matrix와 linear map은 같게 볼 수 있으니까요.) 그리고 대수학에서는 generator에 관심이 꽤나 많은데, 왜냐하면 원소가 어떤 형식으로 나타나는지 안다면 다루기 쉬워지는 경우가 많기 때문이라고 할 수 있어요. 예를 들어, 해석학에서 다양한 함수들을 테일러 급수나 로랑 급수, 혹은 푸리에 급수로 나타내는데, 이렇게 나타내면 극한이나 증가 속도를 구하기 쉬워지는 등 다루기 꽤나 간단해지지요! 그래서 이 글에서는 matrix ring의 generator에 관해 알아보려 해요.</p>
+<p>&nbsp;</p>
+<hr>
+<h1 id="Main-Result"><a href="#Main-Result" class="headerlink" title=" Main Result "></a><center> Main Result </center></h1><h2 id="For-Commutative-Ring"><a href="#For-Commutative-Ring" class="headerlink" title="For Commutative Ring"></a>For Commutative Ring</h2><p>여기서, $R$은 (non-trivial) commutative ring, $n \in \mathbb{Z}_{&gt;0}$은 $0$이 아닌 자연수라고 할게요. 이제 $R$-algebra $R^{n \times n}$의 generator를 살펴보기로 해요!</p>
+<h3 id="Case-1-n-1"><a href="#Case-1-n-1" class="headerlink" title="- Case 1: $n=1$"></a>- Case 1: $n=1$</h3><p>이건 너무나 간단한데, $R^{1 \times 1} = R[\begin{bmatrix} 1 \end{bmatrix}]$이니깐 generator (1)개로 생성된다고 할 수 있어요. 하지만 generator $0$개로는 안 되는데, $R^{1 \times 1}$의 $R$-subalgebra 중 $\emptyset$을 포함하는 건 $0$으로 $R^{1 \times 1}$이 아니기 때문이에요.</p>
+<h3 id="Case-2-n-gt-1"><a href="#Case-2-n-gt-1" class="headerlink" title="- Case 2: $n&gt;1$"></a>- Case 2: $n&gt;1$</h3><p>다음 <strong>Lemma</strong>를 살펴볼게요.</p>
+<blockquote>
+<p><strong>Lemma 1</strong>. $1$보다 큰 자연수 $n$에 대해, $R^{n \times n}$은 commutative가 아니다.</p>
+</blockquote>
+<p><strong>Proof</strong>. 그렇게 어렵지 않은데, $A=(\delta_{1,i}), B=(\delta_{1,j})$로 두면 $AB=(n \delta_{1,i} \delta_{1,j}) \neq (1)=BA$라는 것을 쉽게 알 수 있어요.   $\square$</p>
+<p>그런데, 다음이 성립해요!</p>
+<blockquote>
+<p><strong>Lemma 2</strong>. 원소 하나로 generate되는 $R$-algebra는 commutative이다.</p>
+</blockquote>
+<p><strong>Proof</strong>. 이것도 그리 어렵지 않은데, 원소 하나로 generate되는 $R$-algebra $R[a]$를 생각하면, cannonical map $\varphi:R[t] \to R[a], x \mapsto a$가 surjective가 되고, $R[t]$가 commutative이니 $R[a]$ 역시 commutative가 되어요.   $\square$</p>
+<p>위의 두 <strong>Lemma</strong>들을 종합하면, 다음 <strong>Corollary</strong>를 얻을 수 있어요.</p>
+<blockquote>
+<p><strong>Corollary</strong>. $1$보다 큰 자연수 $n$에 대해, $R^{n \times n}$은 원소 하나로 generate되지 않는다. 즉, 적어도 원소 두 개로 generate된다.</p>
+</blockquote>
+<p>그런데, 다음을 알 수 있어요!!</p>
+<blockquote>
+<p><strong>Lemma 3</strong><a id="lemma3"></a>. $1$보다 큰 자연수 $n$에 대해, $R^{n \times n}$은 원소 두 개로 generate된다.</p>
+</blockquote>
+<p><strong>Proof</strong>. $A=(\delta_{1,i} \delta_{1,j}), B=(\delta_{i \, {\rm mod}\, n, j-1 \, {\rm mod}\, n})$로 정의하면, 어떤 행렬의 왼쪽에 $B$를 곱하는 것은 이 행렬의 각 행을 하나씩 위로 올려주고, 가장 위의 행은 가장 아래로 보내는 연산과 같고, 어떤 행렬의 오른쪽에 $B$를 곱하는 것은 각 열을 하나씩 오른쪽으로 밀고, 가장 오른쪽의 열은 가장 왼쪽으로 보내는 연산과 같아요. 즉, $A$에 $B$들을 적절히 곱하여 $R^{n \times n}$의 standard basis<sup><a href="#fn_1" id="reffn_1">1</a></sup>를 모두 만들 수 있고, 따라서 $R^{n \times n}=R[A,B]$가 되어 증명이 끝나요.   $\square$</p>
+<p>정리하면, 다음처럼 말할 수 있어요!</p>
+<blockquote>
+<p><strong>Theorem 1</strong><a id="theorem1"></a>. commutative ring $R$과 자연수 $n \in \mathbb{Z}_{&gt;0}$에 대해, $R^{n \times n}$의 generator의 최소 개수는 $n=1$일 때 $1$, $n&gt;1$일 때 $2$이다.</p>
+</blockquote>
+<h2 id="For-Noncommutative-Ring"><a href="#For-Noncommutative-Ring" class="headerlink" title="For Noncommutative Ring"></a>For Noncommutative Ring</h2><p>자, 이번에는 noncommutative ring에 대해 살펴볼 건데, 이 경우에도 <a href="#lemma3"><strong>Lemma 3</strong></a>는 여전히 작동해요. 즉, generator의 최소 개수는 $1$ 또는 $2$라는 것이에요! 그렇다면, 이제 궁금한 것은 “noncommutative ring에서는 <a href="#theorem1"><strong>Theorem 1</strong></a>이 깨질 수 있을까??”라는 것이에요. 이것에 대한 답을 말하자면, “깨질 수 있다”인데, 예를 들어 $\mathbb{H}^{2 \times 2}$에서 $A=\begin{bmatrix} 0 &amp; i \\ j &amp; 0 \end{bmatrix}$를 생각해볼게요. 그러면 $iA+Ai=\begin{bmatrix} 0 &amp; -2 \\ 0 &amp; 0 \end{bmatrix} \in \mathbb{H}[A]$에서 $\begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}, \begin{bmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{bmatrix} \in \mathbb{H}[A]$라는 것을 알 수 있어요.<sup><a href="#fn_2" id="reffn_2">2</a></sup> 또, $kI+A^{2}=\begin{bmatrix} 2k &amp; 0 \\ 0 &amp; 0 \end{bmatrix}$에서 $\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}, \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} \in \mathbb{H}[A]$를 알 수 있고, 곧 $\mathbb{H}^{2 \times 2}=\mathbb{H}[A]$가 되어 원소 하나로 생성되어요.</p>
+<p>이제 좀 더 일반적으로, 임의의 $0$이 아닌 자연수 $n$에 대해 $\mathbb{H}^{n \times n}$의 generator를 세아려 볼게요. 먼저, $A=(a_{i}\delta_{i,j-1})$로 정의하면 $A^{n}={\rm diag}(a_{2}a_{3} \cdots a_{1}, a_{3}a_{4} \cdots a_{2}, \cdots, a_{1}a_{2} \cdots a_{n})$이라는 것을 알 수 있어요. 자, 이제 다음을 생각해볼게요.</p>
+<blockquote>
+<p><strong>Claim 1</strong><a id="claim1"></a>. 적절한 ($0$이 아닌) $a_{m} \in \mathbb{H}$들을 골라서 $a_{2}a_{3} \cdots a_{1}, a_{3}a_{4} \cdots a_{2}, \cdots, a_{1}a_{2} \cdots a_{n}$들이 모두 $\mathbb{C} a_{1}a_{2} \cdots a_{n}$의 원소이면서, 또한 서로 다르게 만들 수 있다.</p>
+</blockquote>
+<p>먼저, 다음 <strong>Lemma</strong>를 볼게요.</p>
+<!--
+>**Lemma 4**. $\mathbb{H}$ 위에서, 실수 $a,b \in \mathbb{R}$에 대해 $(j+ak)(j+bk)=C_{a,b}(j+bk)(j+ak)$인 $C_{a,b} \in \mathbb{H}$가 존재하고, 그 값은 
+>$$ C_{a,b}=\frac{((1+ab)+(a-b)i)^{2}}{(1+ab)^{2}+(a-b)^{2}} \in \mathbb{C}$$
+>이다.
+
+**Proof**. 단순히 계산을 하면 나오는 결과예요. 원식 양변의 오른쪽에 $(j+ak)(j+bk)$를 곱해주면, 우변은
+$$\begin{align} C_{a,b}(j+bk)(j+ak)(j+ak)(j+bk)&=C(-(1+ab)+(a-b)i)(-(1+ab)-(a-b)i)\\ &=C((1+ab)^{2}+(a-b)^{2}) \end{align}$$
+이 되고, 좌변은
+$$\begin{align} (j+ak)(j+bk)(j+ak)(j+bk)&=((j+ak)(j+bk))^{2}\\ &=((1+ab)+(a-b)i)^{2} \end{align}$$
+이니깐 양변을 $(1+ab)^{2}+(a-b)^{2}$으로 나누어주면 결과를 얻어요.   $\square$
+
+그런데, 여기서 주목할 점은 $C_{a,b} \in C:=\{z \in \mathbb{C}:|z|=1\}$이라는 것이에요. 그러면 우리는 $C_{a,b}$를 극형식으로 나타내는 것을 생각해볼 수 있는데, $C_{a,b}$의 편각을 $\theta_{a,b}$라고 쓰면 다음을 알 수 있어요.
+$$ \tan \left(\frac{\theta_{a,b}}{2} \right)=\frac{a-b}{1+ab}$$
+그런데, 이것은 $\tan$의 덧셈정리와 매우 유사하고, 따라서 다음을 생각할 수 있어요!
+$$ \begin{align} \tan \left(\frac{\theta_{\tan(a),\tan(b)}}{2} \right)&=\frac{\tan(a)-\tan(b)}{1+\tan(a)\tan(b)} \\ &= \tan(a-b) \end{align}$$
+또는
+$$ \theta_{\tan(a), \tan(b)} \equiv 2(a-b) ({\rm mod}\, 2\pi \mathbb{Z})$$
+-->
+<blockquote>
+<p><strong>Lemma 4</strong>. $\mathbb{H}$ 위에서, 실수 $a \in \mathbb{R}$에 대해 $j(1-ai)=C_{a}(1-ai)j$인 $C_{a} \in \mathbb{C}$가 존재하고, 그 값은</p>
+<script type="math/tex; mode=display">C_{a}=\frac{(1+ai)^{2}}{1+a^{2}}</script><p>이다.</p>
+</blockquote>
+<p><strong>Proof</strong>. 단순히 계산을 하면 되는데, 원식을 조금 계산해주면 $j+ak=C_{a}(j-ak)$를 얻고, 양변의 오른쪽에 $-j+ak$를 곱해주면 $C_{a}(j-ak)(-j+ak)=C_{a}(1+a^{2})$과 $(j+ak)(-j+ak)=1-a^{2}+2ai=(1+ai)^{2}$에서 $C_{a}=\frac{(1+ai)^{2}}{1+a^{2}}$을 얻고, 증명이 끝나요.   $\square$</p>
+<p>그런데, 여기서 주목할 점은 바로 $C_{a} \in C:=\{z \in \mathbb{C}:|z|=1\}$이라는 것이에요! 그러면 우리는 $C_{a}$를 극형식으로 나타내는 것을 생각해볼 수 있는데, $C_{a}$의 편각을 $\theta_{a}$라고 쓰면 $\tan \left(\frac{\theta_{a}}{2} \right)=a$라는 것을 알 수 있어요. 이걸 좀 더 다루기 쉽게 $\tan \left(\frac{\theta_{\tan(a)}}{2}\right)=\tan(a)$ 혹은 $\theta_{\tan(a)}+2\pi \mathbb{Z} = 2a+2\pi \mathbb{Z}$로 쓰면, $C_{\tan(a)}=e^{\theta_{\tan(a)}i}=e^{2ai}$를 얻어요.</p>
+<p>이제 <a href="#claim1"><strong>Claim 1</strong></a>을 증명할 준비가 되었어요!</p>
+<p><strong>Proof of</strong> <a href="#claim1"><strong>Claim 1</strong></a>. 단순히 $a_{n}=j, a_{1}=a_{2}=\cdots=a_{n-1}=1+\tan(1)$로 정의하면 $a_{n}a_{1} \cdots a_{m}=C_{\tan(1)}a_{1}a_{n}a_{2} \cdots a_{m}=\cdots=C_{\tan(1)}^{m}a_{1}a_{2} \cdots a_{m} a_{n}$이라는 것을 쉽게 알 수 있어요. 곧, $a_{m+1}a_{m+2} \cdots a_{m}=C_{\tan(1)}^{m}a_{1}a_{2} \cdots a_{n} \in \mathbb{C} a_{1}a_{2} \cdots a_{n}$를 얻어요.<sup><a href="#fn_3" id="reffn_3">3</a></sup> 그리고 $a_{1}a_{2} \cdots a_{n}$은 $0$이 아니고, $\mathbb{H}$는 division ring이므로 distinctness를 보이기 위해서는 $C_{\tan(1)}^{m}=e^{2mi}$들이 서로 다르다는 것을 보이면 충분한데, 만일 $m_{1}, m_{2} \in \mathbb{Z}$가 $e^{2m_{1}i}=e^{2m_{2}i}$라면 $e^{2(m_{1}-m_{2})i}=1$이 되고, 곧 $2(m_{1}-m_{2}) \in 2\pi \mathbb{Z}$ 혹은 $m_{1}-m_{2} \in \pi \mathbb{Z}$인데, $\pi$는 rational number가 아니니 $m_{1}-m_{2}=0$, 곧 $m_{1}=m_{2}$일 수 밖에 없으니 증명이 끝나요.   $\square$</p>
+<p>자, 이제 증명이 거의 끝났어요! 먼저, <strong>Claim 1</strong>에 의해, 적절한 $a_{m}$들을 골라서 서로 다른 $z_{m} \in \mathbb{C}$가 있어서 $A^{n}={\rm diag}(z_{1}, z_{2}, \cdots, z_{n})a_{1}a_{2} \cdots a_{n}$가 되게 만들 수 있고, 곧 $D={\rm diag}(z_{1}, z_{2}, \cdots, z_{n}) \in \mathbb{H}[A]$라는 것을 알 수 있어요. 그런데 $D^{0}, D^{1}, \cdots, D^{n-1} \in \mathbb{C}^{n \times n}$들이 $\mathbb{C}$-linearly independent하다는 것은 Vandermonde determinant를 생각해보면 당연하고, 곧 $E_{a,b}:=(\delta_{a,i}\delta_{b,j})$로 정의하면 $E_{1,1}, E_{2,2}, \cdots E_{n,n} \in \mathbb{H}[A]$라는 것을 알 수 있어요. 그리고 간단한 계산을 통해 $A^{b-a \, {\rm mod} \, n}E_{b,b}=a_{b+1}a_{b+2} \cdots a_{a}E_{a,b}$라는 것을 알 수 있고, 곧 $E_{a,b} \in \mathbb{H}[A]$가 성립하게 되어요. 따라서 $\mathbb{H}^{n \times n}=\mathbb{H}[A]$로 generator 하나로 생성되어 다음 정리를 얻어요!</p>
+<blockquote>
+<p><strong>Theorem 2</strong>. $0$이 아닌 자연수 $n \in \mathbb{Z}_{&gt;0}$에 대해, $\mathbb{H}^{n \times n}$은 원소 하나로 생성된다.</p>
+</blockquote>
+<p>&nbsp;</p>
+<hr>
+<h1 id="Exercises"><a href="#Exercises" class="headerlink" title="Exercises"></a><center>Exercises</center></h1><p><strong>Exercise 1</strong>. $0$이 아닌 자연수 $n \in \mathbb{Z}_{&gt;0}$에 대해, 적절한 $a_{m} \in \mathbb{H}$가 있어서 permutation을 $\mathbb{C}a_{1}a_{2} \cdots a_{n}$의 원소로 보내는 map $\varphi(\sigma)=a_{\sigma(1)}a_{\sigma(2)} \cdots a_{\sigma(n)}$이 injective가 되게 할 수 있음을 보여주세요.</p>
+<p><strong>Exercise 2</strong>. 사원수 $x,y \in \mathbb{H}$에 대해, $xy=Cyx$인 $C \in \mathbb{H}$가 존재함을 보이고, $|C|=1$임을 보여주세요.</p>
+<p><strong>Problem 1</strong>. noncommutative ring $R$과 자연수 $n \in \mathbb{Z}_{&gt;0}$ 존재해서 $R^{n \times n}$이 원소 하나로 generate되지 않게 만들 수 있을까요?</p>
+<p><strong>Problem 2</strong>. ring $R$에 대해, $R^{n \times n}$을 생성하는데 필요한 최소의 generator 개수를 $d_{R}(n)$으로 쓰자. 그렇다면 $d_{R}(n)$는 terminate할까요?</p>
+<!--
+자, 먼저 permutation $\sigma \in S_{n}$에 대해 $\varphi(\sigma):=\sum_{i=1}^{n} (i-\sigma(i)) b_{\sigma(i)} \in \mathbb{Z}[b_{i}:1 \le i \le n]$로 정의하면 이건 injective라는 것을 쉽게 알 수 있어요. 그런데 transposition $(i(i+1))$에 대해 $\varphi(\sigma \circ (i(i+1)))+(b_{\sigma(i+1)}-b_{\sigma(i)})=\varphi(\sigma)$라는 것을 쉽게 알 수 있고, 이제 앞으로 돌아가서 $a_{i}=\tan(b_{i})$를 대입하면 $\theta_{a_{i}, a_{j}} \equiv 2(b_{i}-b_{j})({\rm mod}\, 2\pi \mathbb{Z})$ 혹은 $C_{a_{i},a_{j}}=e^{2(b_{i}-b_{j})i}$를 얻을 수 있어요. 둘을 종합하면 $a_{\sigma(1)}a_{\sigma(2)} \cdots a_{\sigma(n)}=e^{2 \varphi(\sigma)i} a_{1}a_{2} \cdots a_{n}$가 성립해요! 즉, 
+-->
+<p>&nbsp;</p>
+<hr>
+<blockquote id="fn_1">
+<sup>1</sup>. 사실 $R$이 field가 아닐 수도 있어서 standard basis라는 표현이 정확한 것은 아니지만, 이렇게 표현해도 별 문제 없을 것이라 생각해요.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. 여기서, algebra over a ring이 left algebra를 말한 것일텐데 오른쪽 상수곱이 어떻게 가능한지 의문이 생길 수 있는데, 이건 $Aa:=A(aI)$로 정의할 수 있어요.<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. 여기서, 그리고 이 글의 곳곳에서, 첨자가 조금 문제될 수 있지만, fundamental한 오류가 아니니 편의를 위해 넘어갈게요. 첨자를 $\mathbb{Z}$에 의한 numbering이 아니라 $\mathbb{Z}_{n}$에 의한 numbering으로 이해한다면 좀 더 자연스럽게 이해할 수 있을 거예요. (사실 행렬 $A$를 정의할 때 첨자로 쓴 $i$와 사원수 $i$도 혼용되어 문제가 될 수 있지만, 오해의 소지는 없을 것 같아 그대로 두었어요.)<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="http://algeometer.github.io">カルミ</a>
-            </p><p>Original link：<a href="http://algeometer.github.io/2019/01/28/hello-world/">http://algeometer.github.io/2019/01/28/hello-world/</a>
-            </p><p>Posted：<a href="http://algeometer.github.io/2019/01/28/hello-world/">January 28th 2019, 11:09:08 pm</a>
-            </p><p>Updated：<a href="http://algeometer.github.io/2019/01/28/hello-world/">January 28th 2019, 11:09:08 pm</a>
+            </p><p>Original link：<a href="http://algeometer.github.io/2019/02/05/20190202/">http://algeometer.github.io/2019/02/05/20190202/</a>
+            </p><p>Posted：<a href="http://algeometer.github.io/2019/02/05/20190202/">February 5th 2019, 1:15:21 am</a>
+            </p><p>Updated：<a href="http://algeometer.github.io/2019/02/05/20190202/">February 5th 2019, 2:14:16 am</a>
             </p><p>Copyright Notice：This document is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-Noncommercial 4.0 International License Agreement.</a></p>
         </div>
     
@@ -447,12 +529,17 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href="/2019/02/05/20190202/" title="Number of Generators of a Matrix Ring as an Algebra">
-                    <div class="nextTitle">Number of Generators of a Matrix Ring as an Algebra</div>
+                <a href="/2019/02/05/20190205/" title="Restriction Method to Prove Algebraic Identity">
+                    <div class="nextTitle">Restriction Method to Prove Algebraic Identity</div>
                 </a>
             
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/01/28/hello-world/" title="Hello World">
+                    <div class="prevTitle">Hello World</div>
+                </a>
             
         </li>
     </ul>
@@ -582,7 +669,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text"> Introduction </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Main-Result"><span class="toc-number">2.</span> <span class="toc-text"> Main Result </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#For-Commutative-Ring"><span class="toc-number">2.1.</span> <span class="toc-text">For Commutative Ring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Case-1-n-1"><span class="toc-number">2.1.1.</span> <span class="toc-text">- Case 1: $n=1$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Case-2-n-gt-1"><span class="toc-number">2.1.2.</span> <span class="toc-text">- Case 2: $n&gt;1$</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#For-Noncommutative-Ring"><span class="toc-number">2.2.</span> <span class="toc-text">For Noncommutative Ring</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Exercises"><span class="toc-number">3.</span> <span class="toc-text">Exercises</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

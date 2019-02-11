@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>My Fortress</title>
+    <title>Restriction Method to Prove Algebraic Identity · My Fortress</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -229,12 +229,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">My Fortress</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Restriction Method to Prove Algebraic Identity</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">My Fortress</a>
 </header>
@@ -246,24 +257,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Restriction Method to Prove Algebraic Identity
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="algebra, Cayley-Hamilton theorem, characteristic polynomial, complex analysis, discriminant, identity, identity theorem, linear algebra, math, multiple zero, multivariable polynomial, topology, universal polynomial">algebra, Cayley-Hamilton theorem, characteristic polynomial, complex analysis, discriminant, identity, identity theorem, linear algebra, math, multiple zero, multivariable polynomial, topology, universal polynomial</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">1.2k</span>Reading time: <span class="post-count reading-time">7 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/02/05</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -364,127 +425,136 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/11/20190211/">
-            
-                <span>20190211</span>
-        </a>
-        <div class="abstract-content">
-            
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/11</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/11/20190210/">
-            
-                <span>Identity for Series of Squares</span>
-        </a>
-        <div class="abstract-content">
-            
-Introduction자, 이번에는 해석학에 관한 글을 써보려 해요!! 목표는 $\sum_{i=1}^{\infty} a_{i}^{2}$에 관한 항등식을 증명하고, 이걸 이용해서 문제를 푸는 것이에요.(는 사실 더 일반적인 형태가 있는데, 이건 연습문제로 남길 거예요(??)) 그 전에, 다음의 놀라운 항등식을 살펴볼게요.
+            <main class="main post-page">
+    <article class="article-entry">
+        <hr>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a><center>Introduction</center></h1><p>이 글에서는 일반적인 ring 위의 identity를 $\mathbb{Z}$ 위의 identity로 restriction시킨 후 간단히 보이는 테크닉을 소개할 거예요! 아직은 제 실력이 부족해서 <a href="https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem" target="_blank" rel="noopener">Cayley-Hamilton theorem</a>을 보이는 수준으로만 소개할 것이지만요.</p>
+<p>수학에는 많은 항등식이 있는데, 그 중에서는 특정 구조 위에서는 항상 성립하는 universal한 특성을 가지고 있는 것들이 있어요. 예를 들어, commutative ring에서는 <a href="https://en.wikipedia.org/wiki/Binomial_theorem" target="_blank" rel="noopener">binomial theorem</a>이 항상 성립하고, <a href="https://en.wikipedia.org/wiki/Characteristic_(algebra" target="_blank" rel="noopener">characteristic</a>) $p$인 commutative ring에서는 <a href="https://en.wikipedia.org/wiki/Frobenius_endomorphism" target="_blank" rel="noopener">Frobenius map</a> $\varphi:a \mapsto a^{p}$가 $\varphi(a+b)=\varphi(a)+\varphi(b), \varphi(ab)=\varphi(a)\varphi(b)$를 만족하지요. 그런데, 생각해보면 저저 항등식들의 증명은 ring을 무엇으로 고르든 모두 같아요! 좀 더 정확히 말하자면, 어떤 ring에서 증명하면 다른 모든 ring에 대해서도 “당연히” 성립한달까?? 예를 들어, binomial theorem을 보면 이건 그저 $\mathbb{Z}$ 위의 어떤 다항식이 $0$임을 보이는 것으로 끝나는데, 마치 $\mathbb{Z}$ 위의 항등식 $(x+y)^{2}-(\binom{2}{0}x^{2}y^{0}+\binom{2}{1}x^{1}y^{1}+\binom{2}{2}x^{0}y^{2})=0$에 아무 환의 원소를 evaluation해주면 된다는 느낌이에요. 그러니까, 임의의 commutative ring에서 성립하는 binomial theorem은 그저 $\mathbb{Z}$위의 어떤 항등식으로부터 나오는 것이지요! 그런데, 생각해보면 $\mathbb{Z}$ 위의 항등식은 evaluation으로부터 나와요. 그러니까, evaluation한 결과가 identically zero이면, 원래의 다항식이 zero polynomial이라는 것이에요! 따라서, 임의의 commutative ring에서 성립하는 binomial theorem은 그저 $\mathbb{Z}$ 위의 경우만 살펴보면 충분하다는 이야기예요.</p>
+<p>&nbsp;</p>
+<hr>
+<h1 id="Toy-Example"><a href="#Toy-Example" class="headerlink" title="Toy Example"></a><center>Toy Example</center></h1><p>이제 앞의 내용을 좀 더 수식적으로, 더 의미 있는 예시와 함께 살펴볼게요. 먼저, commutative ring 위에서의 formal derivative는 다음과 같이 정의되어요.</p>
+<blockquote>
+<p><strong>Definition 1</strong> (formal derivative). commutative ring $R$에 대해, <em>formal derivative</em> $D:R[x] \to R[x]$는 $\sum_{i \in \mathbb{N}} a_{i}x^{i} \overset{D}{\mapsto} \sum_{i \in \mathbb{N}} (i+1)a_{i+1}x^{i}$로 정의된다.</p>
+</blockquote>
+<p>그러면 다음 등식이 성립한다는 것은 잘 알려져 있어요.</p>
+<blockquote>
+<p><strong>Identity 1</strong>. commutative ring $R$과 이 위의 formal derivative $D:R[x] \to R[x]$과 polynomial $f,g \in R[x]$에 대해 다음 등식이 성립한다.</p>
+<ul>
+<li>$D(f+g)=D(f)+D(g)$</li>
+<li>$D(fg)=fD(g)+D(f)g$</li>
+</ul>
+</blockquote>
+<p>물론, 이것 이외의 ‘잘 알려진 미분 공식’들도 성립하지만 생략할게요! 그런데, 이 경우엔 $D(f)$가 $\mathbb{Z}$ 위의 다항식이 아니라는 문제점이 발생하는데, 우리는 이것을 일단 indeterminate로 바꿔놓은 후, 나중에 evaluation하는 방식으로 해결할 거예요! 그러니까, 다음을 생각하는 거예요.</p>
+<blockquote>
+<p><strong>Definition 2</strong>. (formal derivative<sup><a href="#fn_1" id="reffn_1">1</a></sup>). $n$차 다항식 $f=a_{0}+a_{1}x+\cdots+a_{n}x^{n} \in \mathbb{Z}[a_{i}:0 \le i \le n][x]$에 대해, $D(f)=a_{1}+2a_{2}x+\cdots+na_{n}x^{n-1}$로 정의한다.</p>
+</blockquote>
+<p>그러면 우리는 $f=c_{0}+c_{1}x+\cdots+c_{n}x^{n} \in R[x]$의 미분 $D(f)$를 $\tilde{f}=a_{0}+a_{1}x+\cdots+a_{n}x^{n} \in \mathbb{Z}[a_{i}:0 \le i \le n][x]$의 미분 $D(\tilde{f})$에 계수를 대입한 $D(f)(c_{0}, c_{1}, \cdots, c_{n})$으로 계산할 수 있어요! 그리고 이걸 이용하면 앞의 identity들은 다음처럼 바꾸어 쓸 수 있어요.</p>
+<blockquote>
+<p><strong>Identity 2</strong>. 아무 자연수 $n \in \mathbb{N}$과 polynomial $f,g \in \mathbb{Z}[a_{i}:0 \le i \le n][x]$에 대해 다음 등식이 성립한다.</p>
+<ul>
+<li>$D(f+g)=D(f)+D(g)$</li>
+<li>$D(fg)=fD(g)+D(f)g$</li>
+</ul>
+</blockquote>
+<p>그런데, 이 identity들은 $\mathbb{Z}$ 위의 다항식이고, 결국 evaluation한 것들에 대해서 등식이 성립한다는 것만 확인하면 증명이 끝나요. 즉, 처음 주었던 identity들은 $\mathbb{Z}$의 경우에 대해서만 증명하면 충분하다는 것이에요! 여기서 당연하지만 조금 특별한 테크닉을 이용할 수 있는데, 바로 $\mathbb{R}$ 위에서 참이면 $\mathbb{Z}$ 위에서도 참이라는 것이에요. 즉, $\mathbb{R}$에서 앞의 등식들을 증명하면 충분하다는 것이지요. 그런데, $\mathbb{R}$에선 formal derivative가 미적분학의 극한을 이용한 derivative와 정확히 일치해요! 그리고 우리는 미적분학에서 저저 등식들이 참이라는 것을 알고 있고, 따라서 증명이 끝나요. 물론, 다른 많은 등식들 역시 그대로 들고올 수 있어요.</p>
+<h1 id="Proof-of-Cayley-Hamilton-Theorem"><a href="#Proof-of-Cayley-Hamilton-Theorem" class="headerlink" title="Proof of Cayley-Hamilton Theorem"></a><center>Proof of Cayley-Hamilton Theorem</center></h1><p>앞의 예시는 사실 굳이 저저 테크닉을 이용하지 않더라도 쉽게 증명할 수 있어요. 하지만 Cayley-Hamilton theorem의 증명은 조금 까다로운데, 이번에는 이 정리를 앞의 테크닉으로 간단하게 증명해볼게요! 먼저, Cayley-Hamilton theorem은 다음을 말해요.</p>
+<blockquote>
+<p><strong>Theorem 1</strong> (Cayley-Hamilton). $R$이 commutative ring, $A \in R^{n \times n}$이 $n \times n$ 행렬이고, $p_{A}(x):=\det(xI-A) \in R[x]$가 $A$의 characteristic polynomial일 때, $p_{A}(A)=0$이다.</p>
+</blockquote>
+<p>이번에도 characteristic polynomial과 같은 것들이 정수 위에 있지 않으니 모조리 정수 위로 옮겨줄 건데, 간단히 $A=(c_{ij}) \in R^{n \times n}$의 characteristic polynomial $p_{A}$는 $\tilde{A}=(a_{ij}) \in (\mathbb{Z}[a_{i}:0 \le i \le n])^{n \times n}$의 characteristic polynomial $p_{\tilde{A}}$를 evaluation해준 $p_{\tilde{A}}(c_{ij})$와 일치한다는 걸 이용할 수 있어요. 이제 앞과 같은 논의를 거치면 우리는 Cayley-Hamilton theorem을 $\mathbb{Z}$ 위에서, 혹은 더 넓은 $\mathbb{C}$ 위에서 증명하면 끝난다는 것을 할 수 있어요! 그런데, 다음은 너무나 잘 알려져 있어요.</p>
+<blockquote>
+<p><strong>Lemma 1</strong>. 만일 행렬 $A \in \mathbb{C}^{n \times n}$이 diagonalizable이라면 $p_{A}(A)=0$이다.</p>
+</blockquote>
+<p><strong>Proof</strong>. $A$가 대각화 가능이니깐 적절한 행렬 $P$를 골라서 $P^{-1}AP=D={\rm diag}(\lambda_{i}), \lambda_{i}:\text{ eigenvalue of } A$로 만들 수 있어요. 그런데 간단한 계산을 통해 $p_{A}(A)=p_{A}(PDP^{-1})=Pp_{D}(A)P^{-1}$라는 걸 알 수 있고, 특히 $p_{A}(D)=p_{A}({\rm diag}(\lambda_{i})={\rm diag}(p_{A}(\lambda_{i}))=0$은 당연해요. 따라서 $p_{A}(A)=0$이 성립하고, 증명이 끝나요.  $\square$</p>
+<p>이제 대각화 가능이 아닌 경우만 살펴보면 되는데, 이 경우는 그리 많지 않은데, 만일 대각화 가능인 행렬이 dense하다면 대각화 가능이 아닌 행렬은 대각화 가능인 행렬들로 근사 가능하고, 곧 polynomial의 연속성에 의해 증명이 끝나요.(characteristic polynomial은 matrix를 변수로 보았을 때 연속이라는 건 당연해요.) 즉, 다음을 증명하면 끝나요.</p>
+<blockquote>
+<p><strong>Lemma 2</strong>. $\mathbb{C}^{n \times n}$에서, 모든 diagonalizable matrix들의 set은 dense다.</p>
+</blockquote>
+<p><strong>Proof</strong>. 먼저, 앞에서 말했듯 우리는 characteristic polynomial을 행렬의 각 entry를 변수처럼 보아 $\mathbb{C}[a_{ij}:1 \le i,j \le n][x]$의 원소로 생각할 수 있고, 여기에 행렬을 넣으면 그 행렬의 characteristic polynomial이 되도록 잡을 수 있어요. 그런데, 다음 <strong>Lemma</strong>를 봐요.</p>
+<blockquote>
+<p><strong>Lemma 3</strong>. polynomial $f \in \mathbb{C}[a_{i}:1 \le i \le m][x]$에 대해, 어떤 공집합이 아닌 open set $U \subseteq \mathbb{C}^{m}$이 있어 모든 $v \in U$에 대해 $x$에 관한 다항식 $f(v)$가 중근을 가진다면, 모든 $v \in \mathbb{C}^{m}$에 대해 $x$에 관한 다항식 $f(v)$가 중근을 가진다.</p>
+</blockquote>
+<p><strong>Proof of Lemma 3</strong>. 먼저, 다음 <strong>Lemma</strong>를 볼게요.</p>
+<blockquote>
+<p><strong>Lemma 4</strong><a id="lemma4"></a>. $m \in \mathbb{N}$에 대해, universal한 다항식 $D_{m} \in \mathbb{Z}[a_{i}:1 \le i \le m]$이 존재해서 monic인 $m$차 다항식 $f=f_{0}+f_{1}x+\cdots+f_{m-1}x^{m-1}+x^{m}$가 중근을 가지는 것과 $D_{m}(f_{0}, f_{1}, \cdots, f_{n-1})$이 되게 할 수 있다.</p>
+</blockquote>
+<p><strong>Proof of Lemma 4</strong>. 먼저, $f$의 field의 algebraic closure를 생각해서 $f=\prod_{1 \le i \le m}(x-\alpha_{i})$로 쓸 수 있고, 이제 다음을 정의할게요.</p>
+<script type="math/tex; mode=display">D=\prod_{1 \le i<j \le m} (\alpha_{i}-\alpha_{j})</script><p>그러면 당연하게도 $f$가 중근을 가지는 것과 $D=0$, 혹은 $D^2=0$은 동치가 되겠지요. 그런데 우리는 universal한 다항식 $D_{m} \in \mathbb{Z}[a_{i}:1 \le i \le m]$이 존재해서 $D^{2}=D_{m}(f_{0},f_{1}, \cdots, f_{m-1})$이란 걸 알고 있어요. (‘대충’ 설명하자면, $D^2$이 대칭식이니 이것은 기본대칭식들에 관한 다항식으로 표현 가능한데, Vieta’s rule에 의해 기본대칭식들은 monic인 다항식의 계수와 정확히 대응되니까!! 물론 정확하게 설명하려면 $D^2$의 variable version 만들고 어쩌구 해야 하는데, 그리 어렵지 않아요.) 즉, $f$가 중근을 가지는 것과 $D^{2}=0$이 동치인데, 이건 $D_{m}(f_{0}, f_{1}, \cdots, f_{m-1})$과 당연히 동치예요!! 이것의 universality는 연습문제로 남길게요.   $\square$</p>
+<p>이 <strong>Lemma</strong>에 의해, 대충 $f$를 ($x$에 대한) 최고차항의 계수로 나누어서 monic으로 만들어줄 수 있고, 우리는 $D_{m}|_{U}=0$이라는 걸 알 수 있어요.(최고차학의 계수가 $0$이라면 locally zero polynomial is zero polynomial이니 당연히 성립해요.) 그런데, 어떤 유리식이 공집합이 아닌 어떤 open set에서 $0$이면 $\mathbb{C}^{m}$에서도 $0$이라는 건 아주 잘 알려져 있어요!! 즉, $D_{m} \equiv 0$이고, 곧 $f$는 항상 중근을 가지게 되어요.   $\square$</p>
+<p>그러니까, 만일 set of all diagonalizable matrices가 dense가 아니라면, 어떤 open set $U \subseteq \mathbb{C}^{n^{2}}$이 있어서 모든 $v \in U$에 대해 $x$에 관한 다항식 $p(v)$가 중근을 가진다는 것이고, 이건 모든 $v \in \mathbb{C}^{n^{2}}$에 대해 $p(v)$가 중근을 가진다는 걸 의미해요. 하지만 이것은 거짓인데, 대충 대각 성분들이 서로 다른 diagonal matrix 아무거나 잡으면 이것의 characteristic polynomial은 중근이 없고, 따라서 모순이에요. 즉, set of all diagonalizable matrices는 dense해요!!   $\square$</p>
+<p>증명을 마무리 짓자면, 우리는 어떤 행렬 $A$를 주든, 이것으로 수렴하는 대각화 가능한 행렬렬(?) $A_{n}$을 잡을 수 있어요. 그런데, $p_{A_{n}}(A_{n})=0$이고, $p_{A_{n}} \to p_{A}$이니깐 $p_{A}(A)=0$이 성립하게 되어요!</p>
+<p>&nbsp;</p>
+<hr>
+<h1 id="Exercises"><a href="#Exercises" class="headerlink" title="Exercises"></a><center>Exercises</center></h1><p>다음은 연습문제들이에요.</p>
+<p><strong>Exercise 1</strong>. ($\mathbb{C}$ 위에서) $a$로 수렴하는 수열 $(a_{n})$과 다항식 $p$로 수렴하는 다항식렬 $p_{n}$에 대해, 만일 $p_{n}(a_{n})=0$이었다면 $p(a)=0$이라는 걸 증명해주세요!</p>
+<p><strong>Exercise 2</strong>. 앞에서 소개했던 <a href="#lemma4"><strong>Lemma 4</strong></a>에서, $D_m$의 universality 증명을 마무리해주세요!</p>
+<p><strong>Exercise 3</strong>. ($\mathbb{C}^{m}$ 위에서) 어떤 유리식이 locally zero이면, 이것은 identically zero임을 보여주세요! 그러니까, 유리식 $f=\frac{P}{Q} \in {\rm Frac}(\mathbb{C}[x_{i}:1 \le i \le m])$에 대해, 공집합이 아닌 open set $U \subseteq \mathbb{C}^{m}$가 있어서 $f|_{U}=0$이면, $f \equiv 0$임을 보여주세요!</p>
+<p><strong>Exercise 4</strong>. commutative ring $R$과 행렬들 $A,B \in R^{n \times n}$에 대해, $p_{AB}=p_{BA}$라는 걸 보여주세요!</p>
+<p>&nbsp;</p>
+<hr>
+<blockquote id="fn_1">
+<sup>1</sup>. 사실 이 정의는 formal derivative의 원래 정의와 같은데, indeterminate가 많아서 혼동을 방지하기 위해 따로 정의한 것이에요.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
 
-Identity 1. 자연수 $n \ge 2$에 대해 다음 등식이 성립한다.
-a_{1}^{2}+a_{2}^{2}+\cdots+a_{n}^{2}=\left[\sum_{i=2}^{n} \frac{1}{i(i-1...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="analysis, bilinear form, identity, inequality, infinite series, linear algebra, tensor product">analysis, bilinear form, identity, inequality, infinite series, linear algebra, tensor product</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/05/20190205/">
-            
-                <span>Restriction Method to Prove Algebraic Identity</span>
-        </a>
-        <div class="abstract-content">
-            
-Introduction이 글에서는 일반적인 ring 위의 identity를 $\mathbb{Z}$ 위의 identity로 restriction시킨 후 간단히 보이는 테크닉을 소개할 거예요! 아직은 제 실력이 부족해서 Cayley-Hamilton theorem을 보이는 수준으로만 소개할 것이지만요.
-수학에는 많은 항등식이 있는데, 그 중에서는 특정 구조 위에서는 항상 성립하는 universal한 특성을 가지고 있는 것들이 있어요. 예를 들어, commutative ring에서는 binomial theorem이 항상 성립하고, ...
+        <div class="license-wrapper">
+            <p>Author：<a href="http://algeometer.github.io">カルミ</a>
+            </p><p>Original link：<a href="http://algeometer.github.io/2019/02/05/20190205/">http://algeometer.github.io/2019/02/05/20190205/</a>
+            </p><p>Posted：<a href="http://algeometer.github.io/2019/02/05/20190205/">February 5th 2019, 1:22:47 am</a>
+            </p><p>Updated：<a href="http://algeometer.github.io/2019/02/05/20190205/">February 11th 2019, 2:31:19 pm</a>
+            </p><p>Copyright Notice：This document is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-Noncommercial 4.0 International License Agreement.</a></p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="algebra, Cayley-Hamilton theorem, characteristic polynomial, complex analysis, discriminant, identity, identity theorem, linear algebra, math, multiple zero, multivariable polynomial, topology, universal polynomial">algebra, Cayley-Hamilton theorem, characteristic polynomial, complex analysis, discriminant, identity, identity theorem, linear algebra, math, multiple zero, multivariable polynomial, topology, universal polynomial</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/05/20190202/">
-            
-                <span>Number of Generators of a Matrix Ring as an Algebra</span>
-        </a>
-        <div class="abstract-content">
-            
- Introduction noncommutative algebra에서, ring 혹은 algebra의 예시로 흔히 matrix ring을 들곤 하는데, 왜냐하면 noncommutative operation 중 가장 유명한 것이 함수의 합성이고, 함수가 linear하다는 조건이 ring의 분배법칙과 algebra의 상수곱에 관한 조건과 정확히 일치하기 때문이에요. (matrix와 linear map은 같게 볼 수 있으니까요.) 그리고 대수학에서는 generator에 관심이 꽤나 많은데, 왜냐하면 원소가 어떤 형식으로 나타나는지...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="algebra, matrix ring, algebra over a ring, generator, quaternion, noncommutative algebra">algebra, matrix ring, algebra over a ring, generator, quaternion, noncommutative algebra</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/02/11/20190210/" title="Identity for Series of Squares">
+                    <div class="nextTitle">Identity for Series of Squares</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/02/05/20190202/" title="Number of Generators of a Matrix Ring as an Algebra">
+                    <div class="prevTitle">Number of Generators of a Matrix Ring as an Algebra</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MjM4My8xODkzMA==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -566,6 +636,24 @@ Introduction이 글에서는 일반적인 ring 위의 identity를 $\mathbb{Z}$ �
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Toy-Example"><span class="toc-number">2.</span> <span class="toc-text">Toy Example</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Proof-of-Cayley-Hamilton-Theorem"><span class="toc-number">3.</span> <span class="toc-text">Proof of Cayley-Hamilton Theorem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Exercises"><span class="toc-number">4.</span> <span class="toc-text">Exercises</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -774,6 +862,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
