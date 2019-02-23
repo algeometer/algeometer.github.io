@@ -452,8 +452,8 @@ height:50vh;
 <script type="math/tex; mode=display">(a_{1}+a_{2}+\cdots+a_{n})a_{n}<\epsilon</script><p>즉, 모든 $\epsilon&gt;0$에 대해 충분히 큰 $M \in \mathbb{N}$이 존재해서 모든 $n&gt;M$에 대해 $|a_{1}^{2}+a_{2}^{2}+\cdots+a_{n}^{2}| &lt; \epsilon$이니깐 증명이 끝나요.   $\square$</p>
 <p>따라서 다음 따름정리를 얻을 수 있어요:</p>
 <blockquote>
-<p><strong>Corollary 1</strong><a id="corollary1"></a>. 만일 \sum_{i=1}^{\infty} a_{i}^{2}가 수렴한다면,</p>
-<script type="math/tex; mode=display">\sum_{i=1}^{\infty} a_{i}^{2}=\sum_{j=2}^{\infty} \frac{(a_{1}+a_{2}+\cdots+a_{j-1}-(j-1)a_{j})^{2} }{j(j-1)}</script><p>이다.</p>
+<p><strong>Corollary 1</strong><a id="corollary1"></a>. 만일 $\sum_{i=1}^{\infty} a_{i}^{2}$가 수렴한다면,</p>
+<script type="math/tex; mode=display">\sum_{i=1}^{\infty} a_{i}^{2}=\sum_{j=2}^{\infty} \frac{(a_{1}+\cdots+a_{j-1}-(j-1)a_{j})^{2} }{j(j-1)}</script><p>이다.</p>
 </blockquote>
 <p>예를 들면, 다음이 성립해요!</p>
 <blockquote>
@@ -478,7 +478,7 @@ height:50vh;
 <h1 id="Exercises"><a href="#Exercises" class="headerlink" title="Exercises"></a><center>Exercises</center></h1><p>다음은 연습문제들이에요!</p>
 <p><strong>Exercise 1</strong>. bilinear form $L:\mathbb{Z}[x_{i}:i \in \mathbb{N}] \times \mathbb{Z}[x_{i}:i \in \mathbb{N}] \to \mathbb{Z}[x_{i}:i \in \mathbb{N}]$에 대해,</p>
 <script type="math/tex; mode=display">\begin{align} &L(a_{1},a_{1})+L(a_{2},a_{2})+\cdots+L(a_{n},a_{n})\\
-=&\left[\sum_{i=2}^{n} \frac{1}{i(i-1)}L(a_{1}+a_{2}+\cdots+a_{i-1}-(i-1)a_{i},a_{1}+a_{2}+\cdots+a_{i-1}-(i-1)a_{i}) \right]\\ &+\frac{1}{n}L(a_{1}+a_{2}+\cdots+a_{n},a_{1}+a_{2}+\cdots+a_{n}) \end{align}</script><p>이라는 걸 증명해주세요! 더 나아가서, $f, g_{i} \in \mathbb{Z}[x_{i}:i \in \mathbb{N}]$에 대해 $f(g_{1}^{2}, g_{2}^{2}, \cdots, g_{n}^{2})=0$이라면 $f(L(g_{1}, g_{1}), L(g_{2},g_{2}), \cdots, L(g_{n},g_{n}))=0$이라는 것을 보여주세요!</p>
+=&\left[\sum_{i=2}^{n} \frac{1}{i(i-1)}L(a_{1}+\cdots+a_{i-1}-(i-1)a_{i},a_{1}+\cdots+a_{i-1}-(i-1)a_{i}) \right]\\ &+\frac{1}{n}L(a_{1}+a_{2}+\cdots+a_{n},a_{1}+a_{2}+\cdots+a_{n}) \end{align}</script><p>이라는 걸 증명해주세요! 더 나아가서, $f, g_{i} \in \mathbb{Z}[x_{i}:i \in \mathbb{N}]$에 대해 $f(g_{1}^{2}, g_{2}^{2}, \cdots, g_{n}^{2})=0$이라면 $f(L(g_{1}, g_{1}), L(g_{2},g_{2}), \cdots, L(g_{n},g_{n}))=0$이라는 것을 보여주세요!</p>
 <p><strong>Exercise 2</strong> (Cauchy-Schwarz inequality, bilinear form version). $\mathbb{R}$-vector space $V$와 non-negative bilinear form $L:V \times V \to \mathbb{R}$에 대해, 다음 부등식이 성립한다는 것을 보여주세요. 모든 $v,w \in V$에 대해,</p>
 <script type="math/tex; mode=display">L(v,v)L(w,w) \ge \left(\frac{L(v,w)+L(w,v)}{2} \right)^{2} \ge L(v,w)L(w,v)</script><p>여기서 non-negative라는 건 모든 $x \in V$에 대해, $L(x,x) \ge 0$라는 것을 의미해요.</p>
 <p><strong>Exercise 3</strong>. 위의 정리들은 ($\mathbb{R}$ 위에서) bilinear form으로 곱셈($\times$)을 주어서 전개한 것으로 볼 수 있어요. 그렇다면, 이 정리들을 ($\mathbb{C}$ 위에서) bilinear form $L(a,b)=a \overline{b}$을 준 것으로 옮길 수 있을까요?? 맞다면 모두 증명하고, 아니라면 어느 곳에서 문제가 생기는지 생각해보아요.</p>
@@ -492,7 +492,7 @@ height:50vh;
             <p>Author：<a href="http://algeometer.github.io">カルミ</a>
             </p><p>Original link：<a href="http://algeometer.github.io/2019/02/11/20190210/">http://algeometer.github.io/2019/02/11/20190210/</a>
             </p><p>Posted：<a href="http://algeometer.github.io/2019/02/11/20190210/">February 11th 2019, 3:24:19 pm</a>
-            </p><p>Updated：<a href="http://algeometer.github.io/2019/02/11/20190210/">February 11th 2019, 3:31:34 pm</a>
+            </p><p>Updated：<a href="http://algeometer.github.io/2019/02/11/20190210/">February 11th 2019, 5:54:39 pm</a>
             </p><p>Copyright Notice：This document is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-Noncommercial 4.0 International License Agreement.</a></p>
         </div>
     
